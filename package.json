@@ -1,0 +1,46 @@
+{
+  "name": "redux-reducer-array-helpers",
+  "version": "3.1.0",
+  "description": "redux helpers for thunk action and action creators",
+  "main": "./lib/src/index.js",
+  "repository": "github:kamikazePT/redux-thunk-action-helpers",
+  "homepage": "https://github.com/kamikazePT/redux-thunk-action-helpers#readme",
+  "author": "Afonso Santos aka kamikazePT",
+  "license": "MIT",
+  "keywords": [
+    "action",
+    "thunk",
+    "redux",
+    "creators",
+    "redux-thunk",
+    "action-creators"
+  ],
+  "scripts": {
+    "coverage": "yarn gulp coverage",
+    "lint": "yarn gulp lint",
+    "compile": "yarn gulp compile",
+    "babel": "yarn gulp babel",
+    "test": "yarn gulp test"
+  },
+  "dependencies": {
+    "lodash": "^4.17.11",
+    "redux-action-types": "^2.0.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^10.0.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "coveralls": "^3.0.2",
+    "eslint": "^5.9.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jest": "^22.0.0",
+    "gulp": "^3.9.1",
+    "husky": "^1.1.4",
+    "jest": "^23.6.0",
+    "path": "^0.12.7",
+    "shelljs": "^0.8.3",
+    "yargs": "^12.0.2"
+  }
+}
