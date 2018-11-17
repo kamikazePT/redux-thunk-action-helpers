@@ -1,6 +1,6 @@
 {
   "name": "redux-thunk-action-helpers",
-  "version": "3.1.0",
+  "version": "1.0.0",
   "description": "redux helpers for thunk action and action creators",
   "main": "./lib/src/index.js",
   "repository": "github:kamikazePT/redux-thunk-action-helpers",
