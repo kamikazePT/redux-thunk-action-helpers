@@ -1,31 +1,33 @@
 import { asyncAction } from 'redux-action-types';
-import { omit } from 'lodash';
 import actionConstants from '../domain/action_types_constants';
-import actionCreator from '../utils/action_creator_utils';
+import { createActionCreator, createErrorActionCreator } from 'redux-simple-action-helpers';
 
 export default (type, fn) => {
   const types = asyncAction(type, [ actionConstants.START, actionConstants.SUCCESS, actionConstants.ERROR]);
 
-  const actionStart = actionCreator(types[0]);
-  const actionSuccess = actionCreator(types[1]);
-  const actionError = actionCreator(types[2]);
+  const actionStart = createActionCreator(types[0]);
+  const actionSuccess = createActionCreator(types[1]);
+  const actionError = createErrorActionCreator(types[2]);
 
   return (...args) => {
     return (dispatch, getState, extra) => {
       const resolved = data => {
-        dispatch(actionSuccess(omit(...data, 'meta'), false, data.meta));
+        dispatch(actionSuccess(data));
       };
     
       const rejected = err => {
-        dispatch(actionError(err, true));
+        dispatch(actionError(err));
       };
 
       dispatch(actionStart());
+      let result;
       try{
-        Promise.resolve(fn(...args, { dispatch, getState, extra })).then(resolved);
+        result = Promise.resolve(fn(...args, { dispatch, getState, extra }));
       }catch(err){
-        Promise.reject(err).then(null, rejected);
+        return Promise.reject(err).catch(rejected);
       }
+
+      return result.then(resolved).catch(rejected);
     };
   };
 };

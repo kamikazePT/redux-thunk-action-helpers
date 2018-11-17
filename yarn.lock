@@ -4472,6 +4472,13 @@ redux-action-types@^2.0.0:
   resolved "https://registry.yarnpkg.com/redux-action-types/-/redux-action-types-2.0.0.tgz#bd2f2d32018e8c6c4c62032973f843abbcfa1945"
   integrity sha512-HqD60zsk8xsJdPYm0w2C8DeApsn9h6luP8/75r7uFdCGwcs1gC9vv5E8tp/ITY+N2vWN+MSAhHWDsrgVI9zuwg==
 
+redux-simple-action-helpers@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/redux-simple-action-helpers/-/redux-simple-action-helpers-1.0.1.tgz#64d6af547f6cb51995ce911db76ab3f7768c0e29"
+  integrity sha512-7txfqRxhf+HDwmHJiv6TcwfbvCBUOyTTY7p3Ck6G37rcZaFDBcJuHNe2NEqCxStsvtXl+wnrXhnXwwYrP1piHw==
+  dependencies:
+    lodash "^4.17.11"
+
 regenerate@^1.2.1:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/regenerate/-/regenerate-1.4.0.tgz#4a856ec4b56e4077c557589cae85e7a4c8869a11"
